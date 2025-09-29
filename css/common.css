@@ -1,0 +1,130 @@
+/* CSS Variables */
+:root {
+  --font-main: Pretendard, "Noto Sans Korea", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+  --color-primary: #202124;
+  --color-text: #7a7a7a;
+  --color-text-hover: #007bff;
+  --desktop-padding: 70px;
+  --mobile-padding: 16px;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.blind {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  border: none;
+  background-color: transparent;
+}
+.hidden {
+  display: none;
+}
+
+/* 텍스트 버튼 */
+.btn--text {
+  color: var(--color-primary);
+}
+.btn--text:hover {
+  color: var(--color-text-hover);
+}
+
+/* 기본 primary 버튼 */
+.btn--primary {
+  color: #fff;
+  border-radius: 8px;
+  background-color: #202636;
+}
+.btn--primary:hover {
+  background-color: #00c85f;
+}
+
+/* outline 버튼 */
+.btn--outline {
+  border: 1px solid #202636;
+  border-radius: 8px;
+}
+.btn--outline:hover {
+  color: #fff;
+  border-color: #00c85f;
+  background-color: #00c85f;
+}
+
+.img--cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.img--contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1530px;
+  margin: 0 auto;
+}
+
+.img-mobile {
+  display: none;
+}
+.br-mobile {
+  display: none;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+/* Mobile */
+@media (max-width: 978px) {
+  .br-mobile {
+    display: block;
+  }
+  .br-pc {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+  }
+  .img-pc {
+    display: none;
+  }
+  .section__title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .container {
+    max-width: 1422px;
+  }
+}
